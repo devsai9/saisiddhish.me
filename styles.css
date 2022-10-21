@@ -77,6 +77,10 @@ body {
 
 #nav {
     margin-bottom: 20px;
+    background-color: rgb(141, 138, 138);
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 #nav-links {
@@ -93,17 +97,24 @@ body {
     border-radius: 15px;
     padding: 7.5px;
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 14px;
     transition: ease-in-out 0.5s;
+    /* font-weight: 650; */
 }
 
 .nav-link:hover, .nav-link:focus {
-    background-color: rgba(241, 206, 132, 0.99);
+    background-color: white;
+    color: black;
 }
 
 .nav-link-active {
-    background-color: rgba(110, 110, 202, 0.579) !important;
+    font-weight: bold;
+}
+
+.nav-link-active.hover, .nav-link-active:focus {
+    background-color: transparent;
+    color: white;
 }
 
 /* Cards */
@@ -114,8 +125,6 @@ body {
 }
 
 .card {
-    border: 2px solid black;
-    border-radius: 20px;
     margin-right: 10px;
     text-align: center;
     padding: 20px;
@@ -123,6 +132,7 @@ body {
     margin-bottom: 5px;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .card img {
@@ -133,7 +143,7 @@ body {
 .card-right {
     float: right;
     text-align: center;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .title {
