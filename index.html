@@ -1,8 +1,77 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="google-site-verification" content="9L8kOm8dpUd9bNTmRcA9JCk3m95uOD9JzmEeRDHpKkA" />
-        <title>Dev Sai's Homepage</title>
-    </head>
-    <body></body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Siddhish Chandra Sekaran</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="loadedNav"></div>
+    <main id="main">
+        <div id="cards">
+            <div class="card">
+                <img src="assets/card_assets/img-placeholder.png" alt="Multi-Lingual Input Tools Image" width="110px" style="margin-bottom: -10px">
+                <div class="card-right">
+                    <p class="title">Lung Cancer Mini-Research</p><br>
+                    <p class="subtitle">John Hopkins University<br>MATLAB II Final Project<br>
+                        <a href="assets/card_assets/JHU_MATLABII_Final_Project.zip">Download</a>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/card_assets/img-placeholder.png" alt="Multi-Lingual Input Tools Image" width="110px" style="margin-bottom: -10px">
+                <div class="card-right">
+                    <p class="title">Quiz Game</p><br>
+                    <p class="subtitle">John Hopkins University<br>MATLAB I Final Project<br>
+                        <a href="assets/card_assets/JHU_MATLABI_Final_Project.zip">Download</a>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/card_assets/img-placeholder.png" alt="Multi-Lingual Input Tools Image" width="110px" style="margin-bottom: -10px">
+                <div class="card-right">
+                    <p class="title">Bus Driving Game</p><br>
+                    <p class="subtitle">John Hopkins University<br>Unity I Day 1 Project<br>
+                        <a href="assets/card_assets/UnityI/Day1/Windowsx86.zip">Download (Windows x86)</a><br>
+                        <a href="assets/card_assets/UnityI/Day1/Windowsx64.zip">Download (Windows x64)</a><br>
+                        <a href="assets/card_assets/UnityI/Day1/Linux.zip">Download (Linux)</a><br>
+                        <a href="assets/card_assets/UnityI/Day1/Mac.app.zip">Download (Mac Intel and Apple Silicon)</a>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/card_assets/img-placeholder.png" alt="Multi-Lingual Input Tools Image" width="110px" style="margin-bottom: -10px">
+                <div class="card-right">
+                    <p class="title">Car Game (Space Invaders Style)</p><br>
+                    <p class="subtitle">John Hopkins University<br>Unity I Day 2 Project<br>
+                        <a href="assets/card_assets/UnityI/Day2/Windowsx86.zip">Download (Windows x86)</a><br>
+                        <a href="assets/card_assets/UnityI/Day2/Windowsx64.zip">Download (Windows x64)</a><br>
+                        <a href="assets/card_assets/UnityI/Day2/Linux.zip">Download (Linux)</a><br>
+                        <a href="assets/card_assets/UnityI/Day2/Mac.app.zip">Download (Mac Intel and Apple Silicon)</a>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/card_assets/img-placeholder.png" alt="Multi-Lingual Input Tools Image" width="110px" style="margin-bottom: -10px">
+                <div class="card-right">
+                    <p class="title">Cake Game (Infinite Runner Style)</p><br>
+                    <p class="subtitle">John Hopkins University<br>Unity I Day 3 Project<br>
+                        <a href="assets/card_assets/UnityI/Day3/Windowsx86.zip">Download (Windows x86)</a><br>
+                        <a href="assets/card_assets/UnityI/Day3/Windowsx64.zip">Download (Windows x64)</a><br>
+                        <a href="assets/card_assets/UnityI/Day3/Linux.zip">Download (Linux)</a><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        $('#loadedNav').load('nav.html');
+        setTimeout(function() {
+            document.getElementById("nav-projects").classList.add("nav-link-active");
+        }, 0200);
+    </script>
+</body>
 </html>

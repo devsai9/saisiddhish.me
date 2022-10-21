@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Siddhish Chandra Sekaran</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div id="loadedNav"></div>
+    <main id="main">
+        <div id="cards">
+            <div class="card">
+                <img src="assets/card_assets/multi_lingual_input_tools.png" alt="Multi-Lingual Input Tools Image" style="margin-bottom: -10px">
+                <div class="card-right">
+                    <p class="title">Multi-Lingual Input Tools</p><br>
+                    <p class="subtitle">
+                        <a href="https://chrome.google.com/webstore/detail/multi-lingual-input-tools/dkbgodmmblfcnfledmedmepimmpebnjo?hl=en&authuser=0">Chrome Webstore</a><br>
+                        <a href="https://microsoftedge.microsoft.com/addons/detail/multilingual-input-tools/aoehggnalolhonphifnooepocfjpghfl">Microsoft Edge Add-ons</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        $('#loadedNav').load('nav.html');
+        setTimeout(function() {
+            document.getElementById("nav-extensions").classList.add("nav-link-active");
+        }, 0200);
+    </script>
+</body>
+</html>

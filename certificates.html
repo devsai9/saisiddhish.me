@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Siddhish Chandra Sekaran</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div id="loadedNav"></div>
+    <main id="certificate-main">
+        <div id="certificates">
+            <img src="assets/class-certificates/Kalvi40.png" alt="Kalvi 40 Appreciation Certificate" class="certificate">
+            <img src="assets/class-certificates/unity1.png" alt="John Hopkins University Unity I Advanced Certificate" class="certificate">
+            <img src="assets/class-certificates/matlab1.png" alt="John Hopkins University MATLAB I Advanced Certificate" class="certificate">
+            <img src="assets/class-certificates/matlab2.png" alt="John Hopkins University MATLAB II Proficient Certificate" class="certificate">
+            <img src="assets/class-certificates/tanaaibootcamp2021.png" alt="Tana AI Bootcamp 2021 Participation Certifiate" class="certificate">
+            <img src="assets/class-certificates/courseraaicourse1.jpeg" alt="Coursera Supervised Machine Learning: Regression and Classification Completion Award" class="certificate">
+        </div>
+    </main>
+    <script>
+        $('#loadedNav').load('nav.html');
+        setTimeout(function() {
+            document.getElementById("nav-certificates").classList.add("nav-link-active");
+        }, 0200);
+    </script>
+</body>
+</html>

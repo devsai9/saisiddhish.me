@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Siddhish Chandra Sekaran</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div id="loadedNav"></div>
+    <main id="main">
+        <div id="cards">
+            <a href="https://www.youtube.com/channel/UCMUr84eGnS0x4uspwzbd-7w" target="_blank">
+                <div class="card">
+                    <img src="assets/yt_channel_icons/techmcgamez.png" alt="Tech MC Gamez Icon" width="110px">
+                    <div class="card-right">
+                        <p class="title">TechMCGamez</p><br>
+                        <p class="subtitle">Gaming Channel</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div id="cards">
+            <a href="https://www.youtube.com/channel/UCMUr84eGnS0x4uspwzbd-7w" target="_blank">
+                <div class="card">
+                    <img src="assets/yt_channel_icons/techmcgamez.png" alt="Code Vibes Icon" width="110px">
+                    <div class="card-right">
+                        <p class="title">Code Vibes</p><br>
+                        <p class="subtitle">Coding Channel</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+    <script>
+        $('#loadedNav').load('nav.html');
+        setTimeout(function() {
+            document.getElementById("nav-global").classList.add("nav-link-active");
+        }, 0200);
+    </script>
+</body>
+</html>
