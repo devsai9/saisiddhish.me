@@ -57,6 +57,7 @@ body {
     width: -moz-fit-content;
     width: fit-content;
     display: inline-flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
     margin-top: 30px;
@@ -80,7 +81,7 @@ body {
     margin-top: 10px;
 }
 
-#about-me-bottom {
+#about-me-inner {
     font-size: 17px;
     margin-top: -20px;
 }
@@ -136,6 +137,10 @@ body {
     /* background-color: white; */
     color: var(--txt-clr);
     opacity: 1;
+}
+
+#nav-blog:hover, #nav-blog:focus, #nav-github:hover, #nav-github:focus, #nav-ytchannel:hover, #nav-ytchannel:focus {
+    opacity: 0.8;
 }
 
 .nav-link-active {
