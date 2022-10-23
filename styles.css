@@ -2,10 +2,15 @@
 
 :root {
     --bg-clr: #2F2F2F;
+
     --nav-txt-clr: #f5f5f7;
+
     --txt-clr: white;
+    --link-txt-clr: #258cdb;
+    
     --card-title-clr: white;
     --card-subtitle-clr: #bab8b8;
+    --card-subtitle-font-size: 14px;
 }
 
 body {
@@ -15,6 +20,41 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-clr);
     color: var(--txt-clr);
+}
+
+a {
+    color: var(--link-txt-clr);
+    text-decoration: none;
+}
+
+.title {
+    font-size: 21px;
+    margin-bottom: -30px;
+    color: var(--card-title-clr);
+}
+
+.title a {
+    color: var(--link-txt-clr);
+}
+
+.subtitle-white {
+    color: white;
+    font-size: var(--card-subtitle-font-size);
+}
+
+.subtitle-white-bigger {
+    color: white;
+    font-size: 15px;
+}
+
+.subtitle {
+    font-size: var(--card-subtitle-font-size);
+    color: var(--card-subtitle-clr);
+}
+
+.subtitle a {
+    color: var(--link-txt-clr);
+    font-size: var(--card-subtitle-font-size);
 }
 
 @media only screen and (max-width: 900px) {
@@ -51,6 +91,8 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     max-width: 555px;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 #about-me-top {
@@ -81,8 +123,8 @@ body {
     margin-top: 10px;
 } */
 
-#about-me-inner {
-    font-size: 17px;
+.about-me-text {
+    text-align: left;
 }
 
 #loadedNav {
@@ -128,22 +170,19 @@ body {
     color: var(--nav-txt-clr);
     opacity: 0.8;
     font-size: 14px;
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.3s;
     /* font-weight: 650; */
 }
 
 .nav-link:hover, .nav-link:focus {
     /* background-color: white; */
-    color: var(--txt-clr);
+    color: var(--link-txt-clr);
     opacity: 1;
-}
-
-#nav-blog:hover, #nav-blog:focus, #nav-github:hover, #nav-github:focus, #nav-ytchannel:hover, #nav-ytchannel:focus {
-    opacity: 0.8;
 }
 
 .nav-link-active {
     font-weight: bold;
+    opacity: 1;
 }
 
 .nav-link-active.hover, .nav-link-active:focus {
@@ -178,22 +217,6 @@ body {
 .card-right {
     float: right;
     margin-left: 20px;
-}
-
-.title {
-    font-size: 21px;
-    margin-bottom: -10px;
-    color: var(--card-title-clr);
-}
-
-.subtitle {
-    font-size: 17px;
-    color: var(--card-subtitle-clr);
-    margin-top: -10px;
-}
-
-.subtitle a {
-    color: var(--card-subtitle-clr);
 }
 
 /* Certificate */
@@ -243,11 +266,11 @@ body {
 
 /* Scroll Bar */
 
-/* Bar */
+/* Bar
 ::-webkit-scrollbar {
     width: 15px;
     border: 2px solid blue;
-}
+} */
 
 /* Path End Arrows
 ::-webkit-scrollbar-button:single-button {
