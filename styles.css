@@ -13,17 +13,52 @@
     --card-subtitle-font-size: 14px;
 }
 
+* {
+    font-family: 'Poppins', sans-serif !important;
+}
+
 body {
     margin-left: 135px;
     margin-right: 135px;
     min-width: 460px;
-    font-family: 'Poppins', sans-serif;
     background-color: var(--bg-clr);
     color: var(--txt-clr);
 }
 
+.color-white {
+    color: white !important;
+}
+
+.flex_direction-column {
+    flex-direction: column;
+}
+
+.font_size-15px {
+    font-size: 15px !important;
+}
+
+.margin_top-10px {
+    margin-top: 10px !important;
+}
+
+.margin_top-30px {
+    margin-top: 30px !important;
+}
+
+.text_align-center {
+    text-align: center !important;
+}
+
+.text_align-left {
+    text-align: left !important;
+}
+
+.width-125px {
+    width: 125px !important;
+}
+
 a {
-    color: var(--link-txt-clr);
+    color: var(--link-txt-clr) !important;
     text-decoration: none;
 }
 
@@ -33,28 +68,9 @@ a {
     color: var(--card-title-clr);
 }
 
-.title a {
-    color: var(--link-txt-clr);
-}
-
-.subtitle-white {
-    color: white;
-    font-size: var(--card-subtitle-font-size);
-}
-
-.subtitle-white-bigger {
-    color: white;
-    font-size: 15px;
-}
-
 .subtitle {
     font-size: var(--card-subtitle-font-size);
     color: var(--card-subtitle-clr);
-}
-
-.subtitle a {
-    color: var(--link-txt-clr);
-    font-size: var(--card-subtitle-font-size);
 }
 
 @media only screen and (max-width: 900px) {
@@ -105,6 +121,12 @@ a {
     margin-top: 30px;
 }
 
+#about-me-top-inner {
+    display: inline-flex; 
+    align-items: center; 
+    margin-top: -20px;
+}
+
 #about-me-logo {
     width: 50px;
     height: 50px;
@@ -122,10 +144,6 @@ a {
     font-weight: 700;
     margin-top: 10px;
 } */
-
-.about-me-text {
-    text-align: left;
-}
 
 #loadedNav {
     position: sticky;
@@ -167,7 +185,7 @@ a {
     border-radius: 15px;
     padding: 7.5px;
     text-decoration: none;
-    color: var(--nav-txt-clr);
+    color: var(--nav-txt-clr) !important;
     opacity: 0.8;
     font-size: 14px;
     transition: ease-in-out 0.3s;
@@ -176,7 +194,7 @@ a {
 
 .nav-link:hover, .nav-link:focus {
     /* background-color: white; */
-    color: var(--link-txt-clr);
+    color: var(--link-txt-clr) !important;
     opacity: 1;
 }
 
@@ -242,7 +260,7 @@ a {
 
 #overlay {
     position: fixed;
-    display: none;
+    display: visible;
     width: 100%;
     height: 100%;
     top: 0;
@@ -259,18 +277,59 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
     width: 800px;
+}
+
+#prompt-outer {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    overflow: scroll;
+}
+
+#prompt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    background-color: black;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+#prompt > div > button {
+    cursor: pointer;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    bottom: 0;
+    margin-bottom: 0px;
+    margin-bottom: -10px;
 }
 
 /* Scroll Bar */
 
-/* Bar
+/* Bar */
 ::-webkit-scrollbar {
     width: 15px;
     border: 2px solid blue;
-} */
+}
 
 /* Path End Arrows
 ::-webkit-scrollbar-button:single-button {
