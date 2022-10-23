@@ -5,7 +5,7 @@
     --nav-txt-clr: #f5f5f7;
     --txt-clr: white;
     --card-title-clr: white;
-    --card-subtitle-clr: #888078;
+    --card-subtitle-clr: #bab8b8;
 }
 
 body {
@@ -71,19 +71,18 @@ body {
 }
 
 #about-me-name {
-    font-size: 21px;
+    font-size: 19px;
     font-weight: 700;
 }
 
-#about-me-job {
+/* #about-me-job {
     font-size: 33px;
     font-weight: 700;
     margin-top: 10px;
-}
+} */
 
 #about-me-inner {
     font-size: 17px;
-    margin-top: -20px;
 }
 
 #loadedNav {
@@ -157,6 +156,7 @@ body {
 #cards {
     display: inline-flex;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .card {
