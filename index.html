@@ -26,7 +26,10 @@
     <script>
         $('#loadedNav').load('nav.html');
         setTimeout(function() {
-            document.getElementById("nav-aboutme").classList.add("nav-link-active");
+            if (document.getElementById("nav") == null) {} 
+            else {
+                document.getElementById("nav-aboutme").classList.add("nav-link-active");
+            }
         }, 0200);
     </script>
 </body>
