@@ -20,7 +20,6 @@
 body {
     margin-left: 135px;
     margin-right: 135px;
-    min-width: 460px;
     background-color: var(--bg-clr);
     color: var(--txt-clr);
 }
@@ -30,21 +29,32 @@ body {
     justify-content: center;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
     body {
         margin-left: 50px;
         margin-right: 50px;
     }
 }
 
-@media only screen and (max-width: 510px) {
+@media only screen and (max-width: 750px) {
     body {
-        margin-left: 0px;
-        margin-right: 0px;
+        height: 100%;
     }
 
-    main {
-        margin-left: 10px;
+    #cards {
+        align-content: center;
+        width: 90% !important;
+    }
+
+    .card {
+        width: -moz-fit-content !important;
+        width: fit-content !important;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-right {
+        margin: 0 !important;
     }
 }
 
@@ -242,6 +252,7 @@ a {
     display: inline-flex;
     flex-wrap: wrap;
     flex-direction: column;
+    width: 55%;
 }
 
 .card {

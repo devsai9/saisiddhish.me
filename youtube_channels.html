@@ -8,27 +8,40 @@
     <link href="assets/s-logo-circle.png" rel="icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link href="styles.css" rel="stylesheet">
+    <style>
+        .card {
+            justify-content: center;
+        }
+
+        @media only screen and (min-width: 750px) {
+            .card:nth-child(2) {
+                margin-left: -20px;
+            }
+        }
+
+        @media only screen and (max-width: 750px) {
+            .card:nth-child(2) {
+                margin-left: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="loadedNav"></div>
     <main id="main">
-        <div id="cards" class="flex_direction-column">
+        <div id="cards">
             <div class="card">
-                <div class="card">
-                    <img src="assets/yt_channel_icons/techmcgamez.png" alt="Tech MC Gamez Icon" class="border_radius-200px width-125px">
-                    <div class="card-right">
-                        <p class="title"><a href="https://www.youtube.com/channel/UCMUr84eGnS0x4uspwzbd-7w" target="_blank" rel="noopener">TechMCGamez&nbsp;&nbsp;<i class="bi bi-box-arrow-up-right"></i></a></p><br>
-                        <p class="subtitle">Gaming Channel</p>
-                    </div>
+                <img src="assets/yt_channel_icons/techmcgamez.png" alt="Tech MC Gamez Icon" class="border_radius-200px width-125px">
+                <div class="card-right">
+                    <p class="title"><a href="https://www.youtube.com/channel/UCMUr84eGnS0x4uspwzbd-7w" target="_blank" rel="noopener">TechMCGamez&nbsp;&nbsp;<i class="bi bi-box-arrow-up-right"></i></a></p><br>
+                    <p class="subtitle">Gaming Channel</p>
                 </div>
             </div>
             <div class="card">
-                <div class="card">
-                    <img src="https://yt3.ggpht.com/ytc/AMLnZu9fzUhi_JNGJoJw_ni3QI5RKwO5UnmPOUkIUVC9=s88-c-k-c0x00ffffff-no-rj" alt="Code Vibes Icon"  class="border_radius-200px width-125px">
-                    <div class="card-right">
-                        <p class="title"><a href="https://www.youtube.com/channel/UC2OUBrGSPqJBm4A32YVbe9A" target="_blank" rel="noopener">Code Vibes&nbsp;&nbsp;<i class="bi bi-box-arrow-up-right"></i></a></p><br>
-                        <p class="subtitle">Coding Channel</p>
-                    </div>
+                <img src="https://yt3.ggpht.com/ytc/AMLnZu9fzUhi_JNGJoJw_ni3QI5RKwO5UnmPOUkIUVC9=s88-c-k-c0x00ffffff-no-rj" alt="Code Vibes Icon"  class="border_radius-200px width-125px">
+                <div class="card-right">
+                    <p class="title"><a href="https://www.youtube.com/channel/UC2OUBrGSPqJBm4A32YVbe9A" target="_blank" rel="noopener">Code Vibes&nbsp;&nbsp;<i class="bi bi-box-arrow-up-right"></i></a></p><br>
+                    <p class="subtitle">Coding Channel</p>
                 </div>
             </div>
         </div>
