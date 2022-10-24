@@ -48,6 +48,10 @@ body {
     }
 }
 
+.border_radius-200px {
+    border-radius: 200px !important;
+}
+
 .color-white {
     color: white !important;
 }
