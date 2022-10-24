@@ -24,7 +24,7 @@
         </div>
     </main>
     <div id="overlay" onclick="off()">
-        <img src="" alt="Image Preview" id="img-preview">
+        <img src="" alt="Image Preview" id="img-preview" compute-dimensions="width">
     </div>
     <script>
         $('#loadedNav').load('nav.html');
@@ -53,6 +53,7 @@
                 $("#overlay").show();
             } else if (id == 'omdenak12') {
                 $("#img-preview").attr("src", "assets/class-certificates/omdena_k12_food_wastage.png");
+                $("#img-preview").attr("compute-dimensions", "height");
                 $("#overlay").show();
             } else if (id == 'epampy') {
                 $("#img-preview").attr("src", "assets/class-certificates/epam_ekids_intropython.png");
@@ -61,6 +62,7 @@
         }
 
         function off() {
+            $("#img-preview").attr("compute-dimensions", "width");
             document.getElementById("overlay").style.display = "none";
         }
     </script>

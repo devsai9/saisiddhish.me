@@ -25,20 +25,50 @@ body {
     color: var(--txt-clr);
 }
 
+#main {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    body {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    main {
+        margin-left: 10px;
+    }
+}
+
 .color-white {
     color: white !important;
 }
 
 .flex_direction-column {
-    flex-direction: column;
+    flex-direction: column !important;
 }
 
 .font_size-15px {
     font-size: 15px !important;
 }
 
+.margin_top-5px {
+    margin-top: 5px !important;
+}
+
 .margin_top-10px {
     margin-top: 10px !important;
+}
+.margin_top-15px {
+    margin-top: 15px !important;
 }
 
 .margin_top-30px {
@@ -71,29 +101,6 @@ a {
 .subtitle {
     font-size: var(--card-subtitle-font-size);
     color: var(--card-subtitle-clr);
-}
-
-@media only screen and (max-width: 900px) {
-    body {
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-}
-
-@media only screen and (max-width: 510px) {
-    body {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    main {
-        margin-left: 10px;
-    }
-}
-
-#main {
-    display: flex;
-    justify-content: center;
 }
 
 /* Nav */
@@ -131,7 +138,6 @@ a {
     width: 50px;
     height: 50px;
     border-radius: 200px;
-    margin-right: 15px;
 }
 
 #about-me-name {
@@ -156,10 +162,6 @@ a {
     padding-bottom: 0.7px;
 }
 
-#about-me {
-    position: static;
-}
-
 #nav {
     margin-bottom: 20px;
     /* background-color: rgb(141, 138, 138); */
@@ -172,6 +174,7 @@ a {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     padding: 10px;
     border: 2px solid white;
     border-radius: 20px;
@@ -206,6 +209,27 @@ a {
 .nav-link-active.hover, .nav-link-active:focus {
     background-color: transparent;
     color: white;
+}
+
+#nav-skip-to-content {
+    background: #e77e23;
+    padding: 8px;
+    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    width: -moz-fit-content;
+    width: fit-content;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    transform: translateY(-200%);
+    margin-left: 5px;
+}
+  
+#nav-skip-to-content:focus {
+    transform: translateY(0%);
+    color: white !important;
 }
 
 /* Cards */
@@ -260,7 +284,7 @@ a {
 
 #overlay {
     position: fixed;
-    display: visible;
+    display: none;
     width: 100%;
     height: 100%;
     top: 0;
@@ -269,7 +293,7 @@ a {
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
     z-index: 2;
-    cursor: pointer;
+    cursor: alias;
     overflow: scroll;
 }
 
@@ -279,7 +303,32 @@ a {
     left: 50%;
     -ms-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
-    width: 800px;
+    overflow: scroll;
+    overflow-y: scroll;
+}
+
+#overlay > *[compute-dimensions = "width"] {
+    width: calc(100% - 100px);
+    height: auto;
+}
+
+@media only screen and (min-width: 1247px) {
+    #overlay > *[compute-dimensions = "width"] {
+        height: calc(100% - 100px);
+        width: auto;
+    }
+}
+
+#overlay > *[compute-dimensions = "height"] {
+    height: calc(100% - 100px);
+    width: auto;
+}
+
+@media only screen and (max-width: 598px) {
+    #overlay > *[compute-dimensions = "height"] {
+        width: calc(100% - 100px);
+        height: auto;
+    }
 }
 
 #prompt-outer {
