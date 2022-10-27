@@ -40,22 +40,6 @@ body {
     body {
         height: 100%;
     }
-
-    #cards {
-        align-content: center;
-        width: 90% !important;
-    }
-
-    .card {
-        width: -moz-fit-content !important;
-        width: fit-content !important;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .card-right {
-        margin: 0 !important;
-    }
 }
 
 .border_radius-200px {
@@ -349,7 +333,7 @@ a {
     display: inline-flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 80%;
+    width: 70%;
 }
 
 .card {
@@ -371,6 +355,24 @@ a {
 .card-right {
     float: right;
     margin-left: 20px;
+}
+
+@media only screen and (max-width: 750px) {
+    #cards {
+        align-content: center;
+        width: 90% !important;
+    }
+
+    .card {
+        width: -moz-fit-content !important;
+        width: fit-content !important;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-right {
+        margin: 0 !important;
+    }
 }
 
 /* Certificate */
