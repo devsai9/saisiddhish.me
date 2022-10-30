@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404 | Sai Chandra</title>
+    <link href="assets/s-logo-circle.png" rel="icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        #title {
+            font-size: 50px;
+            margin-bottom: -10px;
+        }
+
+        #loadedNav {
+            width: 100vw;
+        }
+
+        #nav, #mobile-nav {
+            display: none;
+        }
+
+        #main {
+            display: block;
+            text-align: center;
+            width: 100vw;
+        }
+
+        #search-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #search-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid white;
+            margin-top: 10px;
+            border-radius: 60px;
+            width: -moz-fit-content;
+            width: fit-content;
+            padding: 5px 8px 5px 14px;
+        }
+
+        #search-input {
+            border-radius: 10px;
+            width: 70vw;
+            padding: 5px;
+            background: transparent;
+            border: 0;
+            color: white;
+        }
+
+        @media only screen and (min-width: 1280px) {
+            #search-input {
+                width: 700px !important;
+            }
+        }
+
+        #search-input:focus, #search-input:focus-visible, #search-input:focus-within {
+            border: 0;
+            outline: 0;
+        }
+
+        #search-icon {
+            width: 20px;
+            margin-right: 5px;
+            margin-top: 1px;
+        }
+
+        #search-options {
+            text-align: left;
+            /* margin-left: -30px; */
+            background-color: white;
+            padding: 10px;
+            padding-left: 20px;
+            border-radius: 10px;
+            width: 670px;
+            display: none;
+            transition: ease-in-out 0.5s;
+        }
+
+        @media only screen and (max-width: 480px) {
+            #search-options {
+                width: 70vw !important;
+            }
+        }
+
+        #search-options > li {
+            list-style: url(assets/404/search_icon.svg);
+            padding: 5px;
+            margin-left: 20px;
+        }
+
+        #action-links {
+            font-size: 19px;
+        }
+
+        #action-links > a {
+            margin-top: -1000px;
+        }
+
+        #action-links > a:first-child {
+            margin-top: 0px;
+        }
+
+        #action-links > a, #action-links > a > p {
+            display: inline-block;
+        }
+
+        #action-links > a > p {
+            transition: transform 0.5s ease-in-out;
+        }
+
+        #action-links > a:hover > p {
+            transform: translateX(70%);
+        }
+    </style>
+</head>
+<body>
+    <div id="loadedNav"></div>
+    <main id="main">
+        <h1 id="title">Error 404</h1>
+        <p>This page is missing or maybe it never existed...</p>
+        <div id="search-wrapper">
+            <div id="search-bar">
+                <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search-icon" fill="white"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+                <input type="text" id="search-input" autocomplete="off" title="Search Something" autofocus onkeyup="search()">
+            </div>
+            <ul id="search-options">
+                <li class="search-option"><a href="index.html">About Me/Home</a></li>
+                <li class="search-option"><a href="apps.html">Apps</a></li>
+                <li class="search-option"><a href="bootcamps.html">Bootcamps</a></li>
+                <li class="search-option"><a href="browser_extensions.html">Browser Extensions</a></li>
+                <li class="search-option"><a href="certificates.html">Certificates</a></li>
+                <li class="search-option"><a href="clubs.html">Clubs</a></li>
+                <li class="search-option"><a href="global_competetions.html">Global Competetions</a></li>
+                <li class="search-option"><a href="projects.html">Projects</a></li>
+                <li class="search-option"><a href="research_volunteer.html">Research & Volunteer Work</a></li>
+                <li class="search-option"><a href="youtube_channels.html">YouTube Channels</a></li>
+            </ul>
+        </div><br>
+        <div id="action-links">
+            <a href="index.html">Go to Home <p><i class="bi bi-arrow-right"></i></p></a><br>
+            <a href="projects.html">View Projects <p><i class="bi bi-arrow-right"></i></p></a>
+        </div>
+    </main>
+    
+    <script>
+        $('#loadedNav').load('nav.html');
+
+        function search() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("search-input");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("search-options");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    document.getElementById("search-options").style.display = "block";
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+
+            if (document.querySelectorAll(".search-option")[0].style.display == "none" && document.querySelectorAll(".search-option")[1].style.display == "none" && document.querySelectorAll(".search-option")[2].style.display == "none" && document.querySelectorAll(".search-option")[3].style.display == "none" && document.querySelectorAll(".search-option")[4].style.display == "none" && document.querySelectorAll(".search-option")[5].style.display == "none" && document.querySelectorAll(".search-option")[6].style.display == "none" && document.querySelectorAll(".search-option")[7].style.display == "none" && document.querySelectorAll(".search-option")[8].style.display == "none" && document.querySelectorAll(".search-option")[9].style.display == "none" || document.getElementById("search-input").value == "" || document.getElementById("search-input").value == null) {
+                document.getElementById("search-options").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
