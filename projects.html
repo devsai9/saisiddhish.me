@@ -17,17 +17,17 @@
                 <img src="https://neoorthopedic.com/wp-content/uploads/lungs-1.jpg" alt="Lung Image">
                 <div class="card-right">
                     <p class="title"><a href="assets/card_assets/JHU_MATLABII_Final_Project.zip">Lung Cancer Research Study | May 2022&nbsp;&nbsp;<i class="bi bi-download"></i></a></p><br>
-                    <p class="subtitle">John Hopkins University Applied Physics Laboratory: MATLAB II Final Project<br><br>A study looking at lung cancer. The program estimates the global smoking-to-lung-cancer rate using data from the real world.</p>
+                    <p class="subtitle">John Hopkins University Applied Physics Laboratory: MATLAB II Final Project<br><br>A study looking at lung cancer. The program estimates the global smoking-to-lung-cancer rate using data from the real world.<span id="jhu-lungcancer-dots" class="card-dots">..</span><span id="jhu-lungcancer-readmore" class="card-more"> I used two datasets: one that represented global smoking rates and the other that represented the number of smokers who also had lung cancer. Using the data from these datasets, I estimated the average smoking-to-lung cancer rate and applied it to the top five smoking countries globally as well as to Asian and European countries. Bar graphs were used to display this data.<br><a href="https://docs.google.com/presentation/d/1jRcmORyXtikAa5rZkmBSauYAihHOMXMf7Sroml7bRQU/edit?usp=sharing" target="_blank" rel="noopener">View the full presentation</a></span><button onclick="readMore('jhu-lungcancer')" id="jhu-lungcancer-readmore-btn" class="readmore-btn" title="Read More/Less"><i class="bi bi-caret-down-fill"></i></button></p>
                     <p class="subtitle"><b class="color-white">Languages & Tools:</b> MATLAB</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://thebfd.co.nz/wp-content/uploads/2019/06/Events.jpg" alt="QUIZ Image">
+                <img src="https://thebfd.co.nz/wp-content/uploads/2019/06/Events.jpg" alt="QUIZ: Image">
                 <div class="card-right">
                     <p class="title"><a href="assets/card_assets/JHU_MATLABI_Final_Project.zip">Quiz Program | Decemeber 2021&nbsp;&nbsp;<i class="bi bi-download"></i></a></p><br>
                     <p class="subtitle">
                         John Hopkins University Applied Physics Laboratory: MATLAB I Final Project<br><br>
-                        A MATLAB-created game that tests your knowledge of math, science, history, english, and technology. After that, it scores your responses and provides you with a score as well as a graph that displays your performance in each subject.
+                        A MATLAB-created game that tests your knowledge of math, science, history, english, and technology. After that, it scores your responses and provides you with a score as well as a graph that displays your performance in each subject.<span id="jhu-quiz-dots" class="card-dots">..</span><span id="jhu-quiz-readmore" class="card-more"> The program quizzed the user using the MATLAB console. These were a series of pre-programmed questions stored in an array. The program checked the answers to the pre-programmed answers array when the quiz was finished. This information was presented on a bar graph and a box plot.<br><a href="https://docs.google.com/presentation/d/1KjFSSP9QX1tq0fKAEIdklvyREMyAczzyD5xpM_lm_wA/edit?usp=sharing" target="_blank" rel="noopener">View the full presentation</a></span><button onclick="readMore('jhu-quiz')" id="jhu-quiz-readmore-btn" class="readmore-btn" title="Read More/Less"><i class="bi bi-caret-down-fill"></i></button>
                     </p>
                     <p class="subtitle"><b class="color-white">Languages & Tools:</b> MATLAB</p>
                 </div>
@@ -127,6 +127,30 @@
                 $("#cargame2021").focus();
             } else if (triggered == "busgame2021") {
                 $("#busgame2021").focus();
+            }
+        }
+
+        function readMore(id) {
+            if (id == "jhu-lungcancer") {
+                if (document.getElementById("jhu-lungcancer-dots").style.display == "none") {
+                    document.getElementById("jhu-lungcancer-dots").style.display = "inline";
+                    document.getElementById("jhu-lungcancer-readmore-btn").innerHTML = "<i class=\"bi bi-caret-down-fill\"></i>"; 
+                    document.getElementById("jhu-lungcancer-readmore").style.display = "none";
+                } else {
+                    document.getElementById("jhu-lungcancer-dots").style.display = "none";
+                    document.getElementById("jhu-lungcancer-readmore-btn").innerHTML = "<i class=\"bi bi-caret-up-fill\"></i>"; 
+                    document.getElementById("jhu-lungcancer-readmore").style.display = "inline";
+                }
+            } else if (id == "jhu-quiz") {
+                if (document.getElementById("jhu-quiz-dots").style.display == "none") {
+                    document.getElementById("jhu-quiz-dots").style.display = "inline";
+                    document.getElementById("jhu-quiz-readmore-btn").innerHTML = "<i class=\"bi bi-caret-down-fill\"></i>"; 
+                    document.getElementById("jhu-quiz-readmore").style.display = "none";
+                } else {
+                    document.getElementById("jhu-quiz-dots").style.display = "none";
+                    document.getElementById("jhu-quiz-readmore-btn").innerHTML = "<i class=\"bi bi-caret-up-fill\"></i>"; 
+                    document.getElementById("jhu-quiz-readmore").style.display = "inline";
+                }
             }
         }
     </script>

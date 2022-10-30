@@ -375,6 +375,23 @@ a {
     }
 }
 
+.card-more {
+    display: none;
+}
+
+.readmore-btn {
+    border-radius: 20px;
+    border: 0;
+    text-align: center;
+    padding: 5px;
+    padding-bottom: 0;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    margin-left: 5px;
+    font-size: calc(var(--card-subtitle-font-size) + 3px);
+}
+
 /* Certificate */
 
 #certificate-main {
@@ -393,7 +410,7 @@ a {
     width: 400px;
     margin-right: 10px;
     margin-bottom: 10px;
-    cursor: pointer;
+    cursor: zoom-in;
 }
 
 #overlay {
@@ -407,7 +424,7 @@ a {
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
     z-index: 2;
-    cursor: alias;
+    cursor: zoom-out;
     overflow: scroll;
 }
 
