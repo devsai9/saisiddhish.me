@@ -20,6 +20,7 @@
             font-size: 100px;
             opacity: 0.3; 
             margin-top: -10px;        
+            visibility: hidden;
             animation: error404-opacity 2.5s ease-out infinite 0s alternate both; 
         }
 
@@ -34,9 +35,8 @@
         }
 
         #title {
-            margin-top: -120px;
+            margin-top: -220px;
             font-size: 60px;
-            margin-bottom: -10px;
         }
 
         #loadedNav {
@@ -48,9 +48,13 @@
         }
 
         #main {
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
             width: 100vw;
+            flex-wrap: wrap;
+            overflow-x: hidden;
         }
 
         #search-wrapper {
@@ -74,17 +78,11 @@
 
         #search-input {
             border-radius: 10px;
-            width: 70vw;
+            width: 700px;
             padding: 5px;
             background: transparent;
             border: 0;
             color: white;
-        }
-
-        @media only screen and (min-width: 1280px) {
-            #search-input {
-                width: 700px !important;
-            }
         }
 
         #search-input:focus, #search-input:focus-visible, #search-input:focus-within {
@@ -108,12 +106,6 @@
             width: 670px;
             display: none;
             transition: ease-in-out 0.5s;
-        }
-
-        @media only screen and (max-width: 480px) {
-            #search-options {
-                width: 70vw !important;
-            }
         }
 
         #search-options > li {
@@ -147,35 +139,90 @@
         #action-links > a:hover > p {
             transform: translateX(70%);
         }
+
+        #right {
+            margin-right: 75px;
+        }
+
+
+        #left {
+            float: left;
+            margin-left: -200px;
+        }
+
+        #error-img {
+            width: 650px;
+        }
+
+        @media only screen and (max-width: 1485px) {
+            #right {
+                margin-right: 0;
+            }
+        }
+
+        @media only screen and (max-width: 1264px) {
+            #left {
+                margin-left: 0;
+            }
+        }
+
+        @media only screen and (max-width: 800px) {
+            #search-input {
+                width: 70vw;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            #search-options {
+                width: 70vw !important;
+            }
+
+            #title {
+                margin-top: -120px;
+            }
+
+            #error-img {
+                display: none;
+            }
+
+            #error404 {
+                visibility: visible;
+            }
+        }
     </style>
 </head>
 <body>
     <div id="loadedNav"></div>
     <main id="main">
-        <p id="error404">404</p>
-        <h1 id="title">Oops...</h1>
-        <p>The page you were looking for is missing or maybe... it never existed.</p>
-        <div id="action-links">
-            <a href="index.html">Go to Home <p><i class="bi bi-arrow-right"></i></p></a><br>
-            <a href="projects.html">View Projects <p><i class="bi bi-arrow-right"></i></p></a>
+        <div id="left">
+            <img src="/assets/404/astronauts.svg" alt="Error 404 Image" id="error-img">
         </div>
-        <div id="search-wrapper">
-            <div id="search-bar">
-                <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search-icon" fill="white"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
-                <input type="text" id="search-input" autocomplete="off" title="Search Something" autofocus onkeyup="search()">
+        <div id="right">
+            <p id="error404">404</p>
+            <h1 id="title">Oops...</h1>
+            <p>The page you were looking for is missing or maybe... it never existed.</p>
+            <div id="action-links">
+                <a href="index.html">Go to Home <p><i class="bi bi-arrow-right"></i></p></a><br>
+                <a href="projects.html">View Projects <p><i class="bi bi-arrow-right"></i></p></a>
             </div>
-            <ul id="search-options">
-                <li class="search-option"><a href="index.html">About Me/Home</a></li>
-                <li class="search-option"><a href="apps.html">Apps</a></li>
-                <li class="search-option"><a href="bootcamps.html">Bootcamps</a></li>
-                <li class="search-option"><a href="browser_extensions.html">Browser Extensions</a></li>
-                <li class="search-option"><a href="certificates.html">Certificates</a></li>
-                <li class="search-option"><a href="clubs.html">Clubs</a></li>
-                <li class="search-option"><a href="global_competetions.html">Global Competetions</a></li>
-                <li class="search-option"><a href="projects.html">Projects</a></li>
-                <li class="search-option"><a href="research_volunteer.html">Research & Volunteer Work</a></li>
-                <li class="search-option"><a href="youtube_channels.html">YouTube Channels</a></li>
-            </ul>
+            <div id="search-wrapper">
+                <div id="search-bar">
+                    <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search-icon" fill="white"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+                    <input type="text" id="search-input" autocomplete="off" title="Search Something" autofocus onkeyup="search()">
+                </div>
+                <ul id="search-options">
+                    <li class="search-option"><a href="index.html">About Me/Home</a></li>
+                    <li class="search-option"><a href="apps.html">Apps</a></li>
+                    <li class="search-option"><a href="bootcamps.html">Bootcamps</a></li>
+                    <li class="search-option"><a href="browser_extensions.html">Browser Extensions</a></li>
+                    <li class="search-option"><a href="certificates.html">Certificates</a></li>
+                    <li class="search-option"><a href="clubs.html">Clubs</a></li>
+                    <li class="search-option"><a href="global_competetions.html">Global Competetions</a></li>
+                    <li class="search-option"><a href="projects.html">Projects</a></li>
+                    <li class="search-option"><a href="research_volunteer.html">Research & Volunteer Work</a></li>
+                    <li class="search-option"><a href="youtube_channels.html">YouTube Channels</a></li>
+                </ul>
+            </div>
         </div>
     </main>
     
