@@ -22,6 +22,7 @@
     <div id="loadedNav"></div>
     <main id="certificate-main">
         <div id="certificates">
+            <img onclick="on('mcfai2022')" src="assets/class-certificates/MCF_AI_bootcamp_2022.png" alt="Mark Cuban Foundation AI Bootcamp 2022: Certifiate of Completion" class="certificate">
             <img onclick="on('coursera1')" src="assets/class-certificates/courseraaicourse1.jpeg" alt="Coursera Supervised Machine Learning: Regression and Classification Completion Certificate" class="certificate">
             <img onclick="on('omdenak12')" src="assets/class-certificates/omdena_k12_food_wastage.png" alt="Omdena K-12 Chapter: Food Wastage Completetion Certificate" class="certificate">
             <img onclick="on('matlabii')" src="assets/class-certificates/matlab2.png" alt="John Hopkins University MATLAB II Proficient Certificate" class="certificate">
@@ -67,6 +68,9 @@
                 $("#overlay").show();
             } else if (id == 'epampy') {
                 $("#img-preview").attr("src", "assets/class-certificates/epam_ekids_intropython.png");
+                $("#overlay").show();
+            } else if (id == 'mcfai2022') {
+                $("#img-preview").attr("src", "assets/class-certificates/MCF_AI_bootcamp_2022.png");
                 $("#overlay").show();
             }
         }
